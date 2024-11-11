@@ -1,0 +1,33 @@
+name: chat_bot2
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_generative_ai: ^0.4.6  # Requiere http ^1.1.0
+  permission_handler: ^11.3.1   # Para permisos como el de micrófono
+  shared_preferences: ^2.0.13   # Almacenamiento local
+  speech_to_text: ^7.0.0        # Reconocimiento de voz
+  flutter_tts: ^4.0.2           # Text-to-Speech
+  http: ^1.1.0                  # Versión compatible con google_generative_ai
+  url_launcher: ^6.0.20          # Para abrir URLs
+  intl: ^0.19.0                 # Para internacionalización
+  mobile_scanner: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0         # Buenas prácticas de linting
+
+flutter:
+  assets:
+    - assets/images/logoo.png
+    - assets/images/joel.jpg
+
+  uses-material-design: true
