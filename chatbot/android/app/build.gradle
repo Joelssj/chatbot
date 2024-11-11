@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace = "com.example.chat_bot2"  // Define el namespace correctamente
+    compileSdkVersion 34  // Especifica una versión de SDK válida (por ejemplo, 33)
+
+    ndkVersion "21.4.7075529"  // Puedes ajustar esta versión si usas NDK, o eliminarla si no lo necesitas
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.example.chat_bot2"  // Define el applicationId
+        minSdkVersion 21  // Especifica el valor mínimo del SDK (puede ser ajustado según las necesidades)
+        targetSdkVersion 33  // Especifica la versión del SDK objetivo (debe coincidir con compileSdkVersion)
+        versionCode 1  // El código de versión (puedes ajustarlo según sea necesario)
+        versionName "1.0"  // Nombre de la versión
+    }
+
+    buildTypes {
+    release {
+        minifyEnabled false  // Desactiva la reducción de código
+        shrinkResources false  // Desactiva la eliminación de recursos no utilizados
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+}
+}
+
+flutter {
+    source = "../.."  // Ruta al código fuente de Flutter
+}
